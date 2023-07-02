@@ -1,7 +1,8 @@
 *.iml
 .gradle
 /local.properties
-/.idea/caches
+/.idea
+/.idea/misc.xml
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
@@ -13,7 +14,5 @@
 .externalNativeBuild
 .cxx
 local.properties
-
-# Project exclude paths
-/app/
-/gradle/
+/release/.apk
+/release/.aab
