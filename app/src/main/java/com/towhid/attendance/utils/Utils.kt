@@ -67,18 +67,6 @@ object Utils {
      * Function to return [List<Address>],
      * from [Location] instance using [Geocoder]
      * */
-    fun Context.getAddressFroLocation(location: Location?): List<Address>? {
-        if (location == null) return null
-
-        val gcd = Geocoder(this, Locale.getDefault())
-        try {
-            return gcd.getFromLocation(location.latitude, location.longitude, 1)
-        } catch (e: Exception) {
-            Log.e(TAG, "getAddressFroLocation: ", e)
-        }
-
-        return null
-    }
     fun Context.isDarkTheme(): Boolean {
         return (resources.configuration.uiMode and
                 Configuration.UI_MODE_NIGHT_MASK) == UI_MODE_NIGHT_YES

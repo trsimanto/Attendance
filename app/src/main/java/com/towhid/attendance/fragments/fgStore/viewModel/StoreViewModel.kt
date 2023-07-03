@@ -24,6 +24,7 @@ class StoreViewModel @Inject constructor() : ViewModel() {
                 call: Call<StoreRes>,
                 response: Response<StoreRes>
             ) {
+                print(response)
                 if (response.isSuccessful) {
                     resultLiveData.value = response.body()
                 }
