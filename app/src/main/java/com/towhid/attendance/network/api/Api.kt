@@ -8,7 +8,7 @@ import retrofit2.http.*
 interface Api {
 
     @GET("stores")
-    fun storesReq_(
+    fun storeReq_(
         @Query("page") page: Int,
     ): Call<StoreRes>
 
