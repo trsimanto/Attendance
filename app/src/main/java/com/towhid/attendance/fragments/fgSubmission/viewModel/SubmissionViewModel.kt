@@ -16,6 +16,7 @@ class SubmissionViewModel @Inject constructor() : ViewModel() {
 
     fun submission(
         name: String,
+        uid: String,
         latitude: Double,
         longitude: Double,
     ): MutableLiveData<Any> {
@@ -23,7 +24,7 @@ class SubmissionViewModel @Inject constructor() : ViewModel() {
         val call: Call<AttendanceRes> =
             RetrofitClient.getInstance().getApi().attendanceReq_(
                 name = name,
-                uid = UUID.randomUUID().toString(),
+                uid = uid,
                 latitude = latitude,
                 longitude = longitude,
                 request_id = UUID.randomUUID().toString()
