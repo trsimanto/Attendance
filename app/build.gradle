@@ -129,5 +129,13 @@ dependencies {
     testImplementation "org.powermock:powermock-api-mockito:1.6.2"
     testImplementation "org.powermock:powermock-classloading-xstream:1.6.2"
 
+    androidTestImplementation 'com.androidx.test:runner:1.0.2'
+
+
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+
+    androidTestImplementation 'com.21buttons:fragment-test-rule:2.0.1'
+    debugImplementation 'com.21buttons:fragment-test-rule-extras:2.0.1'
 
 }
