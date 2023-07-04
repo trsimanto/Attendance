@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.towhid.attendance.Validation.isFieldEmpty
 import com.towhid.attendance.databinding.FragmentSubmissionBinding
 import com.towhid.attendance.fragments.fgSubmission.viewModel.SubmissionViewModel
 import com.towhid.attendance.network.model.attendance.response.AttendanceRes
@@ -36,11 +37,11 @@ class SubmissionFragment : Fragment() {
 
     private fun action() {
         binding.btSubmit.setOnClickListener {
-            if (binding.etName.text.toString().trim().isEmpty()) {
+            if (isFieldEmpty(binding.etName.text.toString())) {
                 binding.etName.error = "name can't be empty"
                 return@setOnClickListener
 
-            } else if (binding.etUserId.text.toString().trim().isEmpty()) {
+            } else if (isFieldEmpty(binding.etUserId.text.toString())) {
                 binding.etUserId.error = "user Id can't be empty"
                 return@setOnClickListener
             }
