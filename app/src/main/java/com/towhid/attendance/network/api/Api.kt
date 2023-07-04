@@ -13,6 +13,7 @@ interface Api {
     ): Call<StoreRes>
 
     @POST("attendance")
+    @FormUrlEncoded
     fun attendanceReq_(
         @Field ("name") name : String,
         @Field ("uid") uid : String,

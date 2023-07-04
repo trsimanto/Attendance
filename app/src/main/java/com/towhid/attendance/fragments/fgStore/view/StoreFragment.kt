@@ -1,17 +1,13 @@
 package com.towhid.attendance.fragments.fgStore.view
 
 import android.annotation.SuppressLint
-import android.app.Dialog
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.towhid.attendance.R
 import com.towhid.attendance.databinding.FragmentStoreBinding
 import com.towhid.attendance.fragments.fgStore.adapter.recycler.RecyclerAdapterStore
 import com.towhid.attendance.fragments.fgStore.model.Store
@@ -46,7 +42,7 @@ class StoreFragment : Fragment() {
 
 
     private fun init() {
-        mRecyclerAdapterStore = RecyclerAdapterStore( mStoreList)
+        mRecyclerAdapterStore = activity?.let { RecyclerAdapterStore( activity = it, mStoreList) }!!
         binding.rvStore.apply {
             val lm = LinearLayoutManager(requireContext())
             layoutManager = lm

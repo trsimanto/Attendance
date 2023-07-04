@@ -4,10 +4,8 @@ import android.app.Activity
 import android.content.Context
 import android.content.res.Configuration
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
-import android.location.Address
 import android.location.Geocoder
 import android.location.Location
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -47,11 +45,17 @@ object Utils {
         fragmentTransaction.replace(R.id.container_activity_main, fragment!!)
         fragmentTransaction.commitAllowingStateLoss()
     }
+
     fun replaceFragmentWithBackStack(activity: Activity, fragment: Fragment?) {
         val fragmentManager1 = (activity as FragmentActivity).supportFragmentManager
         val fragmentTransaction = fragmentManager1.beginTransaction()
-        fragmentTransaction.add(R.id.container_activity_main, fragment!!)
-        fragmentTransaction.commitAllowingStateLoss()
+        fragmentTransaction.add(R.id.container_activity_main, fragment!!).addToBackStack("tag").commitAllowingStateLoss()
+    }
+
+    fun removeFragment(activity: Activity, fragment: Fragment?) {
+        val fragmentManager1 = (activity as FragmentActivity).supportFragmentManager
+        val fragmentTransaction = fragmentManager1.beginTransaction()
+        fragmentTransaction.remove(fragment!!).commitAllowingStateLoss()
     }
 
     fun View.show() {

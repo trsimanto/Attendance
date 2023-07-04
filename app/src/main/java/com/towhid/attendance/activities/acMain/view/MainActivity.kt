@@ -1,7 +1,7 @@
 package com.towhid.attendance.activities.acMain.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.towhid.attendance.databinding.ActivityMainBinding
 import com.towhid.attendance.fragments.fgStore.view.StoreFragment
 import com.towhid.attendance.utils.Utils.replaceFragmentWithoutBackStack
@@ -26,6 +26,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun action() {
 
+
     }
+
+
+
+
 
 }
