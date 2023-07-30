@@ -19,6 +19,8 @@ class StoreViewModel @Inject constructor() : ViewModel() {
         val call: Call<StoreRes> =
             RetrofitClient.getInstance().getApi().storeReq_(page = page)
 
+            // Ora live data bade coroutine chaise naki bujtesinah 
+
         call.enqueue(object : Callback<StoreRes> {
             override fun onResponse(
                 call: Call<StoreRes>,
