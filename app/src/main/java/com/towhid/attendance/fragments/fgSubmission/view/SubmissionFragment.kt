@@ -38,11 +38,11 @@ class SubmissionFragment : Fragment() {
     private fun action() {
         binding.btSubmit.setOnClickListener {
             if (isFieldEmpty(binding.etName.text.toString())) {
-                binding.etName.error = "name can't be empty"
+                binding.etName.error = "name can't be empty" //should be in res string 
                 return@setOnClickListener
 
             } else if (isFieldEmpty(binding.etUserId.text.toString())) {
-                binding.etUserId.error = "user Id can't be empty"
+                binding.etUserId.error = "user Id can't be empty" //should be in res string 
                 return@setOnClickListener
             }
             submit(
@@ -59,7 +59,7 @@ class SubmissionFragment : Fragment() {
     }
 
     private fun init() {
-
+//Blank function 
     }
 
 
