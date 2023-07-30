@@ -82,6 +82,7 @@ class StoreFragment : Fragment() {
 
     @SuppressLint("NotifyDataSetChanged")
     private fun loadStore() {
+        //live data bade egula ke ki dst flow diye maintain kora jaye? emn kisu maybe deksilam 
         mStoreVM.getStores(page = page).observe(viewLifecycleOwner) {
             when (it) {
                 is StoreRes -> {
